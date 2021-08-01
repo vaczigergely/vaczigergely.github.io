@@ -6,42 +6,67 @@
 .imageContainer {
     display: flex;
     align-items: center;
+    background-image: url('./images/1.jpg');
+    background-size: cover;
     background-color: lightgray;
     text-align: center;
-    margin: 0;
-    display: block;
-}
-
-#photo {
-    width: 700px;
+    width: 800px;
     height: 400px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    position: absolute;
 }
 
 #back {
     width: 40px;
-    margin: 0;
+    height: 40px;
 }
 
 #forward {
     width: 40px;
+    height: 40px;
     transform: rotate(0.5turn);
-    margin: 0;
+}
+
+.left {
+    position: relative;
+    left: 5px;
+}
+
+.left:hover {
+    background-color: lightseagreen;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.right {
+    position: relative;
+    left: 715px;
+}
+
+.right:hover {
+    background-color: lightseagreen;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
 }
 
 .gray-container {
-    width: 700px;
+    width: 800px;
     margin: auto;
 }
 
 .thumbnailContainer {
     background-color: none;
     text-align: center;
-    margin: 20px 0 0 0;
-    display: block;
+    padding: 420px 0 0 0;
 }
 
 .thumbnailContainer img {
     width: 60px;
     height: 40px;
     margin: 10px;
+    border-color: lightseagreen;
+    border-style: solid;
+    border-width: 0px;
 }

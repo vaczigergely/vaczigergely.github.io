@@ -18,10 +18,19 @@ images.forEach(photo => {
     $('.thumbnailContainer').append(`<img src="${photo.photo}" data-number="${images.indexOf(photo)}" alt="Photo-title">`)
 });
 
+$('.thumbnailContainer img').click((event) => {
+    let dataNumber = $(event.target).attr('data-number');
+    $('.thumbnailContainer img').css('border-width', '0px');
+    $('.thumbnailContainer img').css('margin', '10px');
+    $(event.target).css('border-width', '5px');
+    $(event.target).css('margin', '5px');
+    loadPhoto(dataNumber);
+})
+
 let currentPhoto = 0;
 
 let loadPhoto = (photoNumber) => {
-    $('#photo').attr('src', images[photoNumber].photo);
+    $('.imageContainer').css('background-image', `url(./${images[photoNumber].photo})`);
 }
 
 loadPhoto(currentPhoto);
