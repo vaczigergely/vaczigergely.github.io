@@ -1,0 +1,47 @@
+.page {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.imageContainer {
+    display: flex;
+    align-items: center;
+    background-color: lightgray;
+    text-align: center;
+    margin: 0;
+    display: block;
+}
+
+#photo {
+    width: 700px;
+    height: 400px;
+}
+
+#back {
+    width: 40px;
+    margin: 0;
+}
+
+#forward {
+    width: 40px;
+    transform: rotate(0.5turn);
+    margin: 0;
+}
+
+.gray-container {
+    width: 700px;
+    margin: auto;
+}
+
+.thumbnailContainer {
+    background-color: none;
+    text-align: center;
+    margin: 20px 0 0 0;
+    display: block;
+}
+
+.thumbnailContainer img {
+    width: 60px;
+    height: 40px;
+    margin: 10px;
+}
