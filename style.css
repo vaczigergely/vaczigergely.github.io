@@ -25,6 +25,7 @@
     width: 40px;
     height: 40px;
     transform: rotate(0.5turn);
+    color: white;
 }
 
 .left {
@@ -53,16 +54,61 @@
 
 .gray-container {
     width: 800px;
-    margin: auto;
+    height: 100px;
+    opacity: 50%;
+    background-color: black;
+    position: relative;
+    top: 300px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.gray-container h1 {
+    padding: 10px 0 0 10px;
+}
+
+.gray-container p {
+    padding: 0 10px 10px 10px;
 }
 
 .thumbnailContainer {
     background-color: none;
     text-align: center;
-    padding: 420px 0 0 0;
+    padding: 320px 0 0 0;
 }
 
-.thumbnailContainer img {
+.thumbnail {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Tooltip text */
+  .thumbnail .tooltiptext {
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    padding: 5px 0;
+    border-radius: 6px;
+    opacity: 50%;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+
+    width: 120px;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .thumbnail:hover .tooltiptext {
+    visibility: visible;
+  }
+
+.thumbnailContainer .thumbnail img {
     width: 60px;
     height: 40px;
     margin: 10px;

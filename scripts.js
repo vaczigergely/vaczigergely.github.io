@@ -14,8 +14,15 @@ function loadImages () {
 
 loadImages();
 
+let currentPhoto = 0;
+
 images.forEach(photo => {
-    $('.thumbnailContainer').append(`<img src="${photo.photo}" data-number="${images.indexOf(photo)}" alt="Photo-title">`)
+    $('.thumbnailContainer').append(`
+    <div class="thumbnail">
+        <span class="tooltiptext">${photo.title}</span>
+        <img src="${photo.photo}" data-number="${images.indexOf(photo)}" id=${images.indexOf(photo)} alt="Photo-title">
+    </div>
+    `)
 });
 
 $('.thumbnailContainer img').click((event) => {
@@ -27,10 +34,16 @@ $('.thumbnailContainer img').click((event) => {
     loadPhoto(dataNumber);
 })
 
-let currentPhoto = 0;
 
 let loadPhoto = (photoNumber) => {
     $('.imageContainer').css('background-image', `url(./${images[photoNumber].photo})`);
+    $('.thumbnailContainer img').css('border-width', '0px');
+    $('.thumbnailContainer img').css('margin', '10px');
+    $(`#${photoNumber}`).css('border-width', '5px');
+    $(`#${photoNumber}`).css('margin', '5px');
+    $('.gray-container #photo-title').text(`${images[photoNumber].title}`)
+    $('.gray-container #photo-description').text(`${images[photoNumber].description}`)
+    currentPhoto = photoNumber;
 }
 
 loadPhoto(currentPhoto);
